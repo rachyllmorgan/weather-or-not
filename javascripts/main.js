@@ -16,7 +16,8 @@ requirejs.config({
   }
 });
 
-requirejs(["dependencies", "authentication", "get-zip", "get-weather", "verify-zip"],
-  function(dependencies, auth, getZip, getWeather, verifyZip) {
+requirejs(["dependencies", "get-auth", "set-auth", "get-zip", "get-weather", "verify-zip"],
+  function(dependencies, getAuth, setAuth, getZip, getWeather, verifyZip) {
+
 
   });

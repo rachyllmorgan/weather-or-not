@@ -16,7 +16,9 @@ requirejs.config({
   }
 });
 
-requirejs(["dependencies", "authentication", "get-zip", "get-weather"],
-  function(dependencies, auth, getZip, getWeather) {
+requirejs(["dependencies", "get-auth", "set-auth", "get-zip", "get-weather"],
+  function(dependencies, getAuth, setAuth, getZip, getWeather) {
+  
+    console.log(getAuth.getLogin("github"));
 
   });

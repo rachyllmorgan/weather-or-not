@@ -15,12 +15,12 @@ define(function(require) {
       len=input.length;
       digits="0123456789";
       if(len != 5 && len != 10) {
-        alert("Zip is not the correct length");
+        $("#warning").css("display", "block");
       }
 
       for(i=0; i<5; i++) {
       if (digits.indexOf(input.charAt(i))<0) {
-        alert("First five digits must be numeric");
+        $("#warning").css("display", "block");
         break;
       }
     }

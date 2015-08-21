@@ -2,12 +2,15 @@ define (["jquery", "q"], function($, Q) {
 
   return function(zip) {  
     var deferred = Q.defer();
+    console.log(zip);
+
 
     $.ajax ({
-      url: https:"www.zipcodeapi.com/rest/prVbJwWFA7Pd0kZIyW5GcT8J02W3UNDjezuY5rDGytTzNThmPn22gbLhdIl7vZrK/info.json/" + zip + "/degrees",
+      url: "http://api.openweathermap.org/data/2.5/weather?zip="+zip+",us"
     })
-    .done(function(songs_data) {
-      deferred.resolve(songs_data);
+    .done(function(data) {
+      console.log(data.coord);
+      deferred.resolve(data);
     })
     .fail(function(xhr, status, error) {
       deferred.reject(error);

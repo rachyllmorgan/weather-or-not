@@ -31,7 +31,7 @@ define(function(require) {
         console.log(data.coord);
         getWeather(data.coord).then(function(data2) {
           console.log(data2);
-          $("body").html(currentTpl(data2.list));
+          $("#current").html(currentTpl(data2.list));
         });
       });
     }); 

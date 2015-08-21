@@ -4,6 +4,7 @@
 define(function(require) {
   var $ = require("jquery");
   var getZip = require("get-zip");
+  var getWeather = require("get-weather");
 
   $("#submit-button").click(function(e) {
     e.preventDefault();
@@ -25,8 +26,14 @@ define(function(require) {
       }
     }
 
-    getZip(input).then(function(data) {
-    console.log(data.coord);
-   }); 
+    require(["hbs!../templates/current"], function(currentTpl) {
+      getZip(input).then(function(data) {
+        console.log(data.coord);
+        getWeather(data.coord).then(function(data2) {
+          console.log(data2);
+          $("body").html(currentTpl(data2.list));
+        });
+      });
+    }); 
   });
 });

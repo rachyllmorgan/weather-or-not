@@ -1,12 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
-#warning {
-  display: none; }
-
 #message {
-  border: 2px solid black;
-  text-align: center;
-  padding: 5px;
-  font-size: 1.5em; }
+  display: none;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: red;
+  margin-top: 10px; }
 
 body {
   background: url(http://www.redbrick.me/wp-content/uploads/2014/10/Rain-Umbrella-Wallpaper.jpg); }

@@ -13,18 +13,23 @@ define(function(require) {
     var input = $("#input").val();
     console.log("input", input);
 
+    $("#input").click(function() {
+        $("#message").css("display", "none");
+        $("#input").val("");
+    });
+
       len=input.length;
       digits="0123456789";
       if(len != 5 && len != 10) {
-        $("#warning").css("display", "block");
-      }
+        $("#message").css("display", "block");
+      } 
 
       for(i=0; i<5; i++) {
       if (digits.indexOf(input.charAt(i))<0) {
-        $("#warning").css("display", "block");
+        $("#message").css("display", "block");
         break;
+        } 
       }
-    }
 
     require(["hbs!../templates/current"], function(currentTpl) {
       getZip(input).then(function(data) {

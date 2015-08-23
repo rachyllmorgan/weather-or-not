@@ -13,11 +13,14 @@ define(function(require) {
     var input = $("#input").val();
     console.log("input", input);
 
+// Hides invalid zip message and resets zip input field to empty.
     $("#input").click(function() {
         $("#message").css("display", "none");
         $("#input").val("");
     });
 
+// Verifies that zip input is 5 digits and contains only numbers,
+// puts invalid zip message on screen if not.
       len=input.length;
       digits="0123456789";
       if(len != 5 && len != 10) {

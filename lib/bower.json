@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "authors": [
     "Rachel Morgan <rachyllmorgan@gmail.com>"
-  ],  
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -20,6 +20,7 @@
     "handlebars": "~3.0.3",
     "lodash": "~3.10.1",
     "require-handlebars-plugin": "~0.11.3",
-    "q": "~1.0.1"
+    "q": "~1.0.1",
+    "moment": "~2.10.6"
   }
 }

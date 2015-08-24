@@ -19,5 +19,18 @@ requirejs.config({
 requirejs(["dependencies", "get-auth", "set-auth", "get-zip", "get-weather", "verify-zip"],
   function(dependencies, getAuth, setAuth, getZip, getWeather, verifyZip) {
 
+    $(document).on("click", "#facebook", function(){
+      console.log("facebook login");
+        getAuth.getLogin("facebook");
+    });
 
+    $(document).on("click", "#github", function(){
+      console.log("github login");
+        getAuth.getLogin("github");
+    });
+
+    $(document).on("click", "#googleplus", function(){
+      console.log("google login");
+        getAuth.getLogin("google");    
+    });
   });

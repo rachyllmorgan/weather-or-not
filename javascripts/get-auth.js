@@ -22,6 +22,7 @@ define(function(require){
 		  				console.log("Authenticated successfully with payload:", authData);
 
 		  				setAuth.setUid(authData.uid);
+		  				$("#login").hide();
 
 		 //   require(["core_list"], function(){}) --- create a new file to hold all info so page will not load until authenticated
 					}

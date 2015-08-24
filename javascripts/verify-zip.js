@@ -29,7 +29,7 @@ define(function(require) {
     require(["hbs!../templates/current"], function(currentTpl) {
       getZip(input).then(function(data) {
         console.log(data.coord);
-        getWeather(data.coord).then(function(data2) {
+        getWeather(data.coord, 1).then(function(data2) {
           console.log(data2);
           $("#current").html(currentTpl(data2.list));
         });

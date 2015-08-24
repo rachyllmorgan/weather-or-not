@@ -29,8 +29,8 @@ requirejs(["dependencies", "get-auth", "set-auth", "get-zip", "get-weather", "ve
         getAuth.getLogin("github");
     });
 
-    $(document).on("click", "#googleplus", function(){
-      console.log("google login");
-        getAuth.getLogin("google");    
+    // $(document).on("click", "#googleplus", function(){
+    //   console.log("google login");
+    //     getAuth.getLogin("google");    
     });
   });

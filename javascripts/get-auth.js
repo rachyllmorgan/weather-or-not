@@ -31,6 +31,7 @@ define(function(require){
 		// user already authenticated, store uid and show data
 			} else {
 				setAuth.setUid(authData.uid);
+				$("#login").hide();
 		//   require(["core_list"], function(){}) --- create a new file to hold all info so page will not load until authenticated	
 			
 			}

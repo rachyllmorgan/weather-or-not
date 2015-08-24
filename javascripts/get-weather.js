@@ -6,7 +6,7 @@ define(function(require) {
   return function(coordinates, days) {
     var deferred = Q.defer();
     $.ajax({ 
-        url: "http://api.openweathermap.org/data/2.5/forecast/daily?lat="+coordinates.latitude+"&lon="+coordinates.longitude+"&cnt="+days+"&units=imperial&APPID=1b7f1f7355165ced17dbbeaf8d5ed137" 
+        url: "http://api.openweathermap.org/data/2.5/forecast/daily?lat="+coordinates.lat+"&lon="+coordinates.lon+"&cnt="+days+"&units=imperial&APPID=1b7f1f7355165ced17dbbeaf8d5ed137" 
     })
     // XHR was successful
     .done(function(json_data) {

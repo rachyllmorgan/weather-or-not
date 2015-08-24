@@ -3,10 +3,10 @@ define(function(require) {
   
   var Q = require("q");
 
-  return function(coordinates) {
+  return function(coordinates, days) {
     var deferred = Q.defer();
     $.ajax({ 
-        url: "http://api.openweathermap.org/data/2.5/forecast/daily?lat="+coordinates.latitude+"&lon="+coordinates.longitude+"&cnt=7" 
+        url: "http://api.openweathermap.org/data/2.5/forecast/daily?lat="+coordinates.latitude+"&lon="+coordinates.longitude+"&cnt="+days+"&units=imperial&APPID=1b7f1f7355165ced17dbbeaf8d5ed137" 
     })
     // XHR was successful
     .done(function(json_data) {

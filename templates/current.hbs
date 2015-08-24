@@ -1,11 +1,13 @@
 {{#each this}}
-  <div class="daysOfTheWeek">
+  <div class="daysOfTheWeek panel">
     <h1>{{Today}}</h1>
       <ul>
-        <li>{{temp}}</li>
-        <li>{{weather}}</li>
-        <li>{{pressure}}</li>
-        <li>{{speed}}</li>
+        <li>Current Temperature: {{temp.day}}</li>
+        {{#each weather}}
+        <li> Current Conditions: {{main}}</li>
+        {{/each}}
+        <li>Air Pressure: {{pressure}}</li>
+        <li>Wind Speed/Windchill: {{speed}}</li>
       </ul>
   </div>
 {{/each}}

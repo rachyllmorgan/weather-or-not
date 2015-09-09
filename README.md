@@ -1,6 +1,8 @@
 # Weather-or-Not
 ================
 
+Goal: Use the OpenWeatherMap API to build an application.
+
 ## Getting Started
 1. Install grunt dependencies
 	
